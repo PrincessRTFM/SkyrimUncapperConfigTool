@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32526.322
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConfigAssist.ImGui", "ConfigAssist.ImGui\ConfigAssist.ImGui.csproj", "{CEFFCE82-460C-484D-9660-ADAAA795FF63}"
+	ProjectSection(ProjectDependencies) = postProject
+		{9A196675-2694-4A1F-842D-FD085554F559} = {9A196675-2694-4A1F-842D-FD085554F559}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConfigAssist.Core", "ConfigAssist.Core\ConfigAssist.Core.csproj", "{9A196675-2694-4A1F-842D-FD085554F559}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CEFFCE82-460C-484D-9660-ADAAA795FF63}.Debug|x64.ActiveCfg = Debug|x64
+		{CEFFCE82-460C-484D-9660-ADAAA795FF63}.Debug|x64.Build.0 = Debug|x64
+		{CEFFCE82-460C-484D-9660-ADAAA795FF63}.Release|x64.ActiveCfg = Release|Any CPU
+		{CEFFCE82-460C-484D-9660-ADAAA795FF63}.Release|x64.Build.0 = Release|Any CPU
+		{9A196675-2694-4A1F-842D-FD085554F559}.Debug|x64.ActiveCfg = Debug|x64
+		{9A196675-2694-4A1F-842D-FD085554F559}.Debug|x64.Build.0 = Debug|x64
+		{9A196675-2694-4A1F-842D-FD085554F559}.Release|x64.ActiveCfg = Release|Any CPU
+		{9A196675-2694-4A1F-842D-FD085554F559}.Release|x64.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3953697B-E9FD-4018-A286-8DCF849F0CC5}
+	EndGlobalSection
+EndGlobal

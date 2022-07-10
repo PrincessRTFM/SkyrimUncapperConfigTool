@@ -1,0 +1,62 @@
+name: Build
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+    - master
+    # Just in case I ever change the branch name or something
+    - main
+    - release
+
+env:
+  OUTPUT_DIR: ConfigAssist.ImGui\bin
+  DOTNET_CLI_TELEMETRY_OPTOUT: true
+  DOTNET_NOLOGO: true
+
+jobs:
+  build:
+    runs-on: windows-2022
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        submodules: recursive
+    - name: Setup
+      #uses: microsoft/setup-msbuild@v1.0.2
+      uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version: 6.x
+    - name: Restore dependencies
+      run: dotnet restore -r win
+    - name: Build
+      run: |
+        dotnet build --configuration Debug --no-restore
+        dotnet build --configuration Release --no-restore
+    - name: Package debug build
+      uses: thedoctor0/zip-release@main
+      with:
+        type: zip
+        filename: Debug.zip
+        directory: ${{ env.OUTPUT_DIR }}\Debug\
+    - name: Package release build
+      uses: thedoctor0/zip-release@main
+      with:
+        type: zip
+        filename: Release.zip
+        directory: ${{ env.OUTPUT_DIR }}\Release\
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: Output
+        path: |
+          ${{ env.OUTPUT_DIR }}\Debug\Debug.zip
+          ${{ env.OUTPUT_DIR }}\Release\Release.zip
+        if-no-files-found: error
+    - name: Release
+      if: success() && startsWith(github.ref, 'refs/tags/v')
+      uses: softprops/action-gh-release@v1
+      with:
+        files: |
+          ${{ env.OUTPUT_DIR }}\Debug\Debug.zip
+          ${{ env.OUTPUT_DIR }}\Release\Release.zip
