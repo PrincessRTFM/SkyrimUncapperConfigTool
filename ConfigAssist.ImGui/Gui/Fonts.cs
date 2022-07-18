@@ -1,4 +1,4 @@
-﻿namespace PrincessRTFM.SSEUncapConfig.Gui;
+namespace PrincessRTFM.SSEUncapConfig.Gui;
 
 using System;
 using System.IO;

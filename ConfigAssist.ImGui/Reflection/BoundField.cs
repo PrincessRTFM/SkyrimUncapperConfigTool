@@ -1,4 +1,4 @@
-﻿namespace PrincessRTFM.SSEUncapConfig.Reflection;
+namespace PrincessRTFM.SSEUncapConfig.Reflection;
 
 using System;
 using System.Reflection;

@@ -1,4 +1,5 @@
-﻿namespace PrincessRTFM.SSEUncapConfig.Gui.Component.SectionPane;
+namespace PrincessRTFM.SSEUncapConfig.Gui.Component.SectionPane;
+
 using System;
 using System.Reflection;
 

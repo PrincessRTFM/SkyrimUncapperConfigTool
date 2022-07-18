@@ -1,4 +1,4 @@
-﻿namespace PrincessRTFM.SSEUncapConfig.Gui.Component.SectionPane.Actions;
+namespace PrincessRTFM.SSEUncapConfig.Gui.Component.SectionPane.Actions;
 
 using System;
 using System.Numerics;

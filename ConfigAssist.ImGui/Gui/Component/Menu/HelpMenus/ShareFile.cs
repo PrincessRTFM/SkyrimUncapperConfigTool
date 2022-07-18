@@ -1,4 +1,4 @@
-﻿namespace PrincessRTFM.SSEUncapConfig.Gui.Component.Menu.HelpMenus;
+namespace PrincessRTFM.SSEUncapConfig.Gui.Component.Menu.HelpMenus;
 
 internal class ShareFile: IMenuItem {
 	public string Name { get; } = "Share your Uncapper config";

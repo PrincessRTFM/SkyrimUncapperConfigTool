@@ -1,4 +1,4 @@
-﻿namespace PrincessRTFM.SSEUncapConfig.Gui.Component.Menu.HelpMenus;
+namespace PrincessRTFM.SSEUncapConfig.Gui.Component.Menu.HelpMenus;
 
 internal class RequestFeature: IMenuItem {
 	public string Name { get; } = "Request a feature";

@@ -1,4 +1,4 @@
-﻿namespace PrincessRTFM.SSEUncapConfig.Interop;
+namespace PrincessRTFM.SSEUncapConfig.Interop;
 
 using System;
 using System.Collections.Generic;

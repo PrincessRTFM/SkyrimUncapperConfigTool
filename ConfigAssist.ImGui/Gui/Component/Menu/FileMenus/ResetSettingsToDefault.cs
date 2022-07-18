@@ -1,4 +1,4 @@
-﻿namespace PrincessRTFM.SSEUncapConfig.Gui.Component.Menu.FileMenus;
+namespace PrincessRTFM.SSEUncapConfig.Gui.Component.Menu.FileMenus;
 
 using PrincessRTFM.SSEUncapConfig.Core.Utils;
 

@@ -1,4 +1,4 @@
-﻿namespace PrincessRTFM.SSEUncapConfig.Gui.Component.Menu.FileMenus;
+namespace PrincessRTFM.SSEUncapConfig.Gui.Component.Menu.FileMenus;
 
 internal class SaveDebugCopy: IMenuItem {
 	public string Name { get; } = "Save debug copy";

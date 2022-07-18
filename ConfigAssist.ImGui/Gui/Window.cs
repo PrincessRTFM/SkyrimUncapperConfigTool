@@ -1,4 +1,4 @@
-﻿namespace PrincessRTFM.SSEUncapConfig;
+namespace PrincessRTFM.SSEUncapConfig;
 
 using System;
 using System.Linq;
