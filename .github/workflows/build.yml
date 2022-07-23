@@ -8,6 +8,8 @@ on:
     # Just in case I ever change the branch name or something
     - main
     - release
+    tags:
+    - v*.*.*
 
 env:
   OUTPUT_DIR: ConfigAssist.ImGui\bin
