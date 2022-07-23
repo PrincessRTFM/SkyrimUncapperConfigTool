@@ -32,11 +32,19 @@ internal class LinearLevelling: CalculatedActionBase {
 
 		GuiTools.GetFloat("Levelling rate", ref this.slope, 0.1f, 10);
 
+		ImGui.BeginGroup();
 		ImGui.Checkbox("Include by-character-level subrates?", ref this.byCharLevel);
+		ImGui.SameLine();
+		GuiTools.Text(Icons.QuestionCircle.ToIconString(), TextColour.Shaded);
+		ImGui.EndGroup();
 		GuiTools.Tooltip("This tool modifies the by-base-skill-level subrates for per-skill player-XP gains, to flatten the rate at which your character gains XP by levelling those skills."
 			+ " However, you can also adjust the rate at which your character gains XP for levelling skills, based on your character's level. If you check this box, those rates will also be adjusted.");
 
+		ImGui.BeginGroup();
 		ImGui.Checkbox("Include base rates?", ref this.raw);
+		ImGui.SameLine();
+		GuiTools.Text(Icons.QuestionCircle.ToIconString(), TextColour.Shaded);
+		ImGui.EndGroup();
 		GuiTools.Tooltip("This tool overwrites the player XP subrates to even out levelling rates to whatever you set in the player XP rates tab, times whatever the rate above is set to."
 			+ "\n\nIf this box is checked, it will ALSO overwrite the base player XP rates as well.");
 
