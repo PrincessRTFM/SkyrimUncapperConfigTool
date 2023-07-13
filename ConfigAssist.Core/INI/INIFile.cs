@@ -23,7 +23,7 @@ public class INIFile {
 
 		Dictionary<string, string> currentSection = new(StringComparer.OrdinalIgnoreCase);
 
-		this.ini[""] = currentSection;
+		this.ini[string.Empty] = currentSection;
 
 		IEnumerable<(int, string)> lines = txt.Split("\n", StringSplitOptions.RemoveEmptyEntries)
 			.Select((t, i) => (idx: i, text: t.Trim()));
@@ -59,14 +59,11 @@ public class INIFile {
 			sb.AppendLine();
 
 			foreach (KeyValuePair<string, string> keyValue in section.Value) {
-				if (keyValue.Key.StartsWith(";")) {
+				if (keyValue.Key.StartsWith(";"))
 					sb.Append(keyValue.Value);
-					sb.AppendLine();
-				}
-				else {
+				else
 					sb.AppendFormat("{0} = {1}", keyValue.Key, keyValue.Value);
-					sb.AppendLine();
-				}
+				sb.AppendLine();
 			}
 
 			if (!endWithCRLF(sb))
