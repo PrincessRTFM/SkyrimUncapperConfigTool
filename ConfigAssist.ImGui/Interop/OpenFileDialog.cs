@@ -16,6 +16,7 @@ public class OpenFileDialog {
 	public static bool IsSelecting => selectorSemaphore.CurrentCount == 0;
 
 	[DllImport("Comdlg32.dll", CharSet = CharSet.Auto)]
+	[DefaultDllImportSearchPaths(DllImportSearchPath.System32)]
 	private static extern bool GetOpenFileName([In, Out] OpenFileName ofn);
 
 	public static void SelectFile(Action<OpenFileName> successCallback, Action? cancelCallback = null, string? initialDir = null, string title = "Select a file...", params string[][] filterLines) {

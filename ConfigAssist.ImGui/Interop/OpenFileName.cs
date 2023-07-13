@@ -6,6 +6,7 @@ namespace PrincessRTFM.SSEUncapConfig.Interop;
 // OpenFileDlg.cs
 
 using System;
+using System.Diagnostics.CodeAnalysis;
 using System.Runtime.InteropServices;
 
 /*
@@ -38,6 +39,7 @@ typedef struct tagOFN {
 } OPENFILENAME, *LPOPENFILENAME;
 */
 
+[SuppressMessage("Naming", "CA1711:Identifiers should not have incorrect suffix", Justification = "Tell that to microsoft, they're the ones who named it")]
 [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Auto)]
 public class OpenFileName {
 	public int StructSize = 0;

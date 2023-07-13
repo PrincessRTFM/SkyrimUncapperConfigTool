@@ -2,6 +2,7 @@ namespace PrincessRTFM.SSEUncapConfig.Core.INI;
 
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Reflection;
 
 using PrincessRTFM.SSEUncapConfig.Core.Utils;
