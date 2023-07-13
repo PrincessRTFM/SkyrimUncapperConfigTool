@@ -23,9 +23,7 @@ internal class ExpRate: SectionPaneBase {
 		for (int i = 0; i < this.linkedFields.Length; i++) {
 			(string label, string id) = LabeledFields[i];
 			id = $"{fieldPrefix}_{id}";
-			FieldInfo? f = uct.GetField(id);
-			if (f is null)
-				throw new NullReferenceException($"Unable to retrieve field reference for {id}");
+			FieldInfo? f = uct.GetField(id) ?? throw new NullReferenceException($"Unable to retrieve field reference for {id}");
 			this.linkedFields[i] = (label, f);
 		}
 	}
